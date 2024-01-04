@@ -33,6 +33,6 @@ def main():
         if user_choice == correct_choice: 
             print("Correct!")
             flag = 0
-        else:
+        else :
             print("Wrong answer, try again.\n")
 main()
