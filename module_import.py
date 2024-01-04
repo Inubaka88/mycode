@@ -14,21 +14,25 @@ trivia = {
             ]
         }
 def main():
-    game_night = trivia.get('question')
-    correct_choice = trivia.get('correct_answer')
-    wrong1 = trivia['incorrect_answers'][0]
-    wrong2 = trivia['incorrect_answers'][1]
-    wrong3 = trivia['incorrect_answers'][2]
-    print(game_night)
-    print(f"A: {html.unescape(correct_choice)}")
-    print(f"B: {html.unescape(wrong1)}")
-    print(f"C: {html.unescape(wrong2)}")
-    print(f"D: {html.unescape(wrong3)}")
-    print("Make your choice: ")
-    user_choice = input().lower()
-    correct_choice = 'a'
-    if user_choice == correct_choice: 
-        print("Correct!")
-    else :
-        print ("Wrong answer.")
+    flag = 1
+    while flag == 1:
+        game_night = trivia.get('question')
+        correct_choice = trivia.get('correct_answer')
+        wrong1 = trivia['incorrect_answers'][0]
+        wrong2 = trivia['incorrect_answers'][1]
+        wrong3 = trivia['incorrect_answers'][2]
+        print(game_night)
+        print(f"A: {html.unescape(correct_choice)}")
+        print(f"B: {html.unescape(wrong1)}")
+        print(f"C: {html.unescape(wrong2)}")
+        print(f"D: {html.unescape(wrong3)}")
+        print("Make your choice: ")
+        user_choice = input().lower()
+        correct_choice = 'a'
+
+        if user_choice == correct_choice: 
+            print("Correct!")
+            flag = 0
+        else:
+            print("Wrong answer, try again.\n")
 main()
