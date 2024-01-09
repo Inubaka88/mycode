@@ -115,6 +115,9 @@ while True:
     if currentRoom == 'Kitchen' and 'rifle' in inventory and 'ammo box' in inventory:
         print('You have slain the monster and stole their home... YOU WIN!')
         break
+    if currentRoom == 'Kitchen' and 'rifle' in inventory:
+        print('You take aim at the monster and shoot....Click...No ammo....GAME OVER')
+        break
     if currentRoom == 'Kitchen'  and 'monster' in rooms[currentRoom]['item']:
         print('A monster has got you... GAME OVER!')
         break
